@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoList.Views.CreatTasksPage"
+             Title="Добавить задачу">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="Имя" 
+                   FontSize="Medium"/>
+            <Entry x:Name="UserNameEntry" 
+                   Placeholder="Напишите свое имя"
+                   Keyboard="Text"/>
+            <Label Text="Email" 
+                   FontSize="Medium"/>
+            <Entry x:Name="EmailEntry" 
+                   Placeholder="Напишите email"
+                   Keyboard="Email"/>
+            <Label Text="Краткое описание" 
+                   FontSize="Medium"/>
+            <Editor x:Name="TextEntry" 
+                    Placeholder="Напишите  краткое описание"
+                    Keyboard="Text"
+                    HeightRequest="100"/>
+            <Button x:Name="ButtonCreat" 
+                    Text="Создать" 
+                    BackgroundColor="#2196F3" 
+                    TextColor="White"
+                    Clicked="ButtonSet_Clicked_Creat"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

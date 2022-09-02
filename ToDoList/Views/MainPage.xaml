@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoList.Views.MainPage"
+             Title="Главная">
+    <StackLayout>
+        <Grid Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+            <Picker x:Name="Picker" 
+                Margin="20,0,10,0"
+                SelectedIndexChanged="Picker_SelectedIndexChanged" 
+                Title="Сортировка"
+                    Grid.Column="0">
+                <Picker.Items>
+                    <x:String>id</x:String>
+                    <x:String>username</x:String>
+                    <x:String>email</x:String>
+                    <x:String>status</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button x:Name="ButtonSet" 
+                    Text="Set" 
+                    Clicked="Button_Clicked_Set"
+                    Grid.Column="1"/>
+        </Grid>
+        <ListView x:Name="TodoList" 
+                  RowHeight="150"
+                  Margin="20"
+                  ItemSelected="TodoList_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Id}" 
+                                   FontSize="Medium"/>
+                            <Label Text="{Binding Username}" 
+                                   FontSize="Title"/>
+                            <Label Text="{Binding Email}" 
+                                   FontSize="Small"/>
+                            <Label Text="{Binding Text}"
+                                   FontSize="Small"/>
+                            <Label Text="{Binding Status}" 
+                                   FontSize="Micro"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Text="Назад" 
+                    Clicked="Button_Clicked_Back"
+                    BackgroundColor="#2196F3" 
+                    TextColor="White"
+                    Grid.Column="0"/>
+            <Button Text="Вперед" 
+                    Clicked="Button_Clicked_Forth"
+                    BackgroundColor="#2196F3" 
+                    TextColor="White"
+                    Grid.Column="1"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

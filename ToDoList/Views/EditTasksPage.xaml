@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoList.Views.EditTasksPage"
+             Title="Редактирование задачи">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="Id" 
+                   FontSize="Medium"/>
+            <Label x:Name="IdLabel"
+                   Text="Id" 
+                   FontSize="Subtitle"/>
+            <Label Text="Имя" 
+                   FontSize="Medium"/>
+            <Label x:Name="UserNameLabel" 
+                   Text="Имя"
+                   FontSize="Subtitle"/>
+            <Label Text="Email" 
+                   FontSize="Medium"/>
+            <Label x:Name="EmailLabel" 
+                   Text="Email"
+                   FontSize="Subtitle"/>
+            <Label Text="Краткое описание" 
+                   FontSize="Medium"/>
+            <Editor x:Name="TextEntry" 
+                    Placeholder="Напишите  краткое описание"
+                    Keyboard="Text"
+                    HeightRequest="100"
+                    FontSize="Subtitle"/>
+            <Label Text="Статус" 
+                   FontSize="Medium"/>
+            <Button x:Name="ButtonStatus" 
+                    Text="Статус" 
+                    Clicked="ButtonStatus_Clicked"/>
+            <Button x:Name="ButtonSave" 
+                    Text="Сохранить" 
+                    BackgroundColor="#2196F3" 
+                    TextColor="White"
+                    Clicked="ButtonSave_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ToDoList.Views"
+             x:Class="ToDoList.AppShell">
+
+    <FlyoutItem Title="Главная">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Добавить задачу">
+        <ShellContent ContentTemplate="{DataTemplate local:CreatTasksPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Вход">
+        <ShellContent  ContentTemplate="{DataTemplate local:LoginPage}" />
+    </FlyoutItem>
+</Shell>
